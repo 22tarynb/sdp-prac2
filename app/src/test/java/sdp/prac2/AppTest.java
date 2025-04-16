@@ -7,4 +7,29 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+
+
+  @Test void testTask6() {
+        SimpleFunctions classBeingTested = new SimpleFunctions();
+
+        List<Integer> dta1 = Arrays.asList(20,455,702,9);
+        List<Integer> dta2 = Arrays.asList(371,900,607);
+        List<Integer> dta3 = Arrays.asList(62,0);
+
+        
+        List<Integer> exp1 = Arrays.asList(100,500,800,100);
+        List<Integer> exp2 = Arrays.asList(400,900,700);
+        List<Integer> exp3 = Arrays.asList(100,0);
+
+
+        List<Integer> res1 = classBeingTested.Task6(dta1);
+        List<Integer> res2 = classBeingTested.Task6(dta2);
+        List<Integer> res3 = classBeingTested.Task6(dta3);
+
+        
+        assertIterableEquals(exp1,res1);
+        assertIterableEquals(exp2,res2);
+        assertIterableEquals(exp3,res3);
+    }
+
 }
